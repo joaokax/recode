@@ -1,0 +1,46 @@
+﻿@model AgenciaViagens.Models.Destino;
+
+@{
+    ViewData["Title"] = "Novo Usuario";
+}
+<br />
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Para onde quer viajar?</h3>
+            <h6>Preencha os dados da viagem corretamente</h6>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-sm-10">
+            <form method="post" asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Partida" class="control-label">Local de partida</label>
+                    <input asp-for="Partida" class="form-control" />
+                    <span asp-validation-for="Partida" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Chegada" class="control-label">Local de chegada</label>
+                    <input asp-for="Chegada" class="form-control" />
+                    <span asp-validation-for="Chegada" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Ida" class="control-label">Data de ida (dd/mm/aaaa)</label>
+                    <input asp-for="Ida" class="form-control" />
+                    <span asp-validation-for="Ida" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Volta" class="control-label">Data de volta (dd/mm/aaaa)</label>
+                    <input asp-for="Volta" class="form-control" />
+                    <span asp-validation-for="Volta" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Criar Destino" class="btn btn-warning" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

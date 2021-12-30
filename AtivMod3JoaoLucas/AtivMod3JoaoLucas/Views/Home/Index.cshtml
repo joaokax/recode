@@ -1,0 +1,122 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<body>
+
+    <div class="bg-home"><img src="https://i.imgur.com/CtyQuJv.jpg" alt="Second slide"></div>
+    <div class="text-center">
+        <div class="cover-container d-flex w-100 h-100 mx-auto flex-column p-5">
+
+            <main role="main" class="inner cover">
+                <img src="https://i.imgur.com/qBgy3ah.png" alt="Logo" style="width:280px;" />
+                <h1 class="cover-heading text-light">Agência de viagens Nº1 do Brasil</h1>
+                <p class="lead text-light">
+                    Se você está procurando os melhores preços em passagens aéreas e hotéis temos opções incríveis para você!
+                </p>
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col p-3">
+                            <div class="card shadow" style="width: 100%;">
+                                <img src="https://i.imgur.com/I0FUuXd.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h2 class="card-title">Rio de Janeiro</h2>
+                                    <h5 class="card-title text-danger">Preço especial</h5>
+                                    <p class="card-text">Rio de Janeiro (informalmente referida como Rio) é um município brasileiro, capital do estado homônimo, situado no Sudeste do país. Maior destino turístico internacional no Brasil.</p>
+                                    <a asp-area="" asp-controller="Home" asp-action="Promocoes" class="btn btn-warning"><b>Ver pacotes</b></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col p-3">
+                            <div class="card shadow" style="width: 100%;">
+                                <img src="https://i.imgur.com/ii5kcvI.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h2 class="card-title">Maceió</h2>
+                                    <h5 class="card-title text-danger">Preço especial</h5>
+                                    <p class="card-text">Maceió é um município brasileiro, capital do estado de Alagoas, na Região Nordeste do país. As festividades realizadas na cidade anualmente atraem uma enorme quantidade de turistas.</p>
+                                    <a asp-area="" asp-controller="Home" asp-action="Promocoes" class="btn btn-warning"><b>Ver pacotes</b></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col p-3">
+                            <div class="card shadow" style="width: 100%;">
+                                <img src="https://i.imgur.com/YiMnXlg.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h2 class="card-title">Foz do Iguaçu</h2>
+                                    <h5 class="card-title text-danger">ÚLTIMAS RESERVAS</h5>
+                                    <p class="card-text">Foz do Iguaçu é um município brasileiro localizado na Região Oeste estado do Paraná. Conhecida internacionalmente pelas Cataratas do Iguaçu, é uma das 7 Maravilhas da Natureza.</p>
+                                    <a asp-area="" asp-controller="Home" asp-action="Promocoes" class="btn btn-warning"><b>Ver pacotes</b></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </main>
+
+            <section class="container pb-4 pt-4 mb-md-3">
+                <div class="row">
+                    <div class="col-md-8 mb-4">
+                        <div class="d-sm-flex justify-content-between align-items-center bg-warning overflow-hidden rounded-3">
+                            <div class="py-4 my-2 my-md-0 py-md-5 px-4 ms-md-3 text-center text-sm-start">
+                                <h3 class="mb-2">
+                                    <i class="bi bi-life-preserver" style="font-size: 60px"></i><br />
+                                    Viaje em segurança!
+                                </h3>
+                                <h6 class="fs-lg fw-light mb-4">Proporcionamos o melhor sistema de segurança para que sua viajem saia conforme o planejado</h6>
+                                <a class="btn btn-light btn-shadow" asp-area="" asp-controller="Destino" asp-action="Index">Faça sua viagem</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="d-flex flex-column h-100 justify-content-center bg-dark bg-position-center rounded-3">
+                            <div class="py-4 my-2 px-4 text-center">
+                                <div class="py-1">
+                                    <h5 class="mb-2 text-light">
+                                        <i class="bi bi-credit-card" style="font-size: 60px"></i><br />
+                                        Destinos inesquecíveis
+                                    </h5>
+                                    <p class="fs-sm text-light">E com as melhores formas de pagamento</p>
+                                    <a class="btn btn-light btn-shadow" asp-area="" asp-controller="Destino" asp-action="Index">Faça sua viagem</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+    </div>
+
+</body>
+
+<style>
+    .bg-home img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        z-index: -2;
+        position: absolute;
+    }
+    .bg-home::after {
+        display: block;
+        content: "";
+        width: 100%;
+        height: 450px;
+        background-color: #000;
+        z-index: -1;
+        position: absolute;
+        opacity: .3;
+    }
+
+    body {
+        background-color: #f1f1f1;
+    }
+</style>

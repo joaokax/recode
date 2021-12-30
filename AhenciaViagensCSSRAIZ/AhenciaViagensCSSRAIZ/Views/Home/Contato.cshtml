@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewData["Title"] = "Contato";
+}
+
+<h1>Contato</h1>
+
+<div class="row2">
+    <div class="column2 left2" style="background-color:gold;">
+        <h2>Estamos no WhatsApp</h2>
+        <p>Entre em contato através do WhatsApp. É fácil e seguro!</p>
+        <button class="btn-col2">Mandar mensagem</button>
+    </div>
+    <div class="column2 right2" style="background-color:#555; color:#f1f1f1">
+        <h2>Atendimento por Telefone</h2>
+        <p>Fale conosco por chamada. Custo de uma ligação para São Paulo</p>
+        <button class="btn-col2">Ligue</button>
+    </div>
+</div>
+
+<style>
+.column2 {
+  float: left;
+  padding: 10px;
+  height: 250px;
+  text-align: center;
+}
+
+.left2 {
+  width: 60%;
+  padding: 50px 20px 20px 20px;
+  margin:10px;
+}
+
+.right2 {
+  width: 30%;
+  padding: 50px 20px 20px 20px;
+  margin:10px;
+}
+
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.btn-col2 {
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #fff;
+  color: black;
+}
+
+@@media (max-width:700px) {
+.left2 {
+  width: 95%;
+}
+.right2 {
+  width: 95%;
+}
+}
+</style>
+

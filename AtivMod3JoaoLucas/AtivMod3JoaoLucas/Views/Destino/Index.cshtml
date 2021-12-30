@@ -1,0 +1,59 @@
+﻿
+
+@model IEnumerable<AgenciaViagens.Models.Destino> 
+    @{
+        ViewData["Title"] = "Lista de Destinos";
+}
+<br />
+<br />
+                      <div class="container">
+                          <div class="row">
+                              <div class="col-sm-6">
+                                  <h3>Lista de Destinos</h3>
+                              </div>
+                              <div class="col-sm-6">
+                                  <a class="btn btn-warning d-block" asp-action="Create" asp-controller="Destino">Fazer nova viagem</a>
+                              </div>
+                          </div>
+                          <br />
+                          <br />
+
+                          <div class="row">
+                              @if (Model.Count() > 0)
+                              {
+                              <table class="table table-bordered table-striped">
+                                  <thead>
+                                      <tr>
+                                          <td>@Html.DisplayNameFor(m => m.Id)</td>
+                                          <td>@Html.DisplayNameFor(m => m.Partida)</td>
+                                          <td>@Html.DisplayNameFor(m => m.Chegada)</td>
+                                          <td>@Html.DisplayNameFor(m => m.Ida)</td>
+                                          <td>@Html.DisplayNameFor(m => m.Volta)</td>
+                                          <td>Ações</td>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      @foreach (var item in Model)
+                                      {
+                                      <tr>
+                                          <td>@item.Id</td>
+                                          <td>@item.Partida</td>
+                                          <td>@item.Chegada</td>
+                                          <td>@item.Ida</td>
+                                          <td>@item.Volta</td>
+                                          <td>
+                                              <a asp-action="EditarDestino" asp-route-id="@item.Id" class="btn text-danger">Editar</a>
+                                              <a asp-action="DeletarDestino" asp-route-id="@item.Id" class="btn btn-danger">Deletar</a>
+                                          </td>
+                                      </tr>
+
+                                      }
+                                  </tbody>
+                              </table>
+                              }
+                              else
+                              {
+                              <p>Sem registros.</p>
+                              }
+                          </div>
+                      </div>

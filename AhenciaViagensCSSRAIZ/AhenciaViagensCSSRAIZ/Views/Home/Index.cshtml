@@ -1,0 +1,203 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<body>
+
+    <div class="bg-home"><img src="https://i.imgur.com/CtyQuJv.jpg" alt="Second slide"></div>
+    <div class="text-center">
+        <div style="width:100%">
+
+
+            <img src="https://i.imgur.com/qBgy3ah.png" alt="Logo" style="width:280px;" />
+            <h1 class="cover-heading text-light">Agência de viagens Nº1 do Brasil</h1>
+            <p class="lead text-light">
+                Se você está procurando os melhores preços em passagens aéreas e hotéis temos opções incríveis para você!
+            </p>
+
+            <div class="row1">
+
+                <div class="column1">
+                    <div class="card1">
+                        <img src="https://i.imgur.com/I0FUuXd.jpg" alt="Rio de Janeiro">
+                        <h4><b>Rio de Janeiro</b></h4>
+                        <h3>Preço especial </h3>
+                        <p>Rio de Janeiro (informalmente referida como Rio) é um município brasileiro, capital do estado homônimo, situado no Sudeste do país. Maior destino turístico internacional no Brasil.</p>
+                        <button class="btn-card1">Ver pacotes</button>
+                    </div>
+                </div>
+
+                <div class="column1">
+                    <div class="card1">
+                        <img src="https://i.imgur.com/ii5kcvI.jpg" alt="Maceió">
+                        <h4><b>Maceió</b></h4>
+                        <h3>Preço especial </h3>
+                        <p>Maceió é um município brasileiro, capital do estado de Alagoas, na Região Nordeste do país. As festividades realizadas na cidade anualmente atraem uma enorme quantidade de turistas.</p>
+                        <button class="btn-card1">Ver pacotes</button>
+                    </div>
+                </div>
+
+
+                <div class="column1">
+                    <div class="card1">
+                        <img src="https://i.imgur.com/YiMnXlg.jpg" alt="Foz do Iguaçu">
+                        <h4><b>Foz do Iguaçu</b></h4>
+                        <h3>ÚLTIMAS RESERVAS </h3>
+                        <p>Foz do Iguaçu é um município brasileiro localizado na Região Oeste estado do Paraná. Conhecida internacionalmente pelas Cataratas do Iguaçu, é uma das 7 Maravilhas da Natureza.</p>
+                        <button class="btn-card1">Ver pacotes</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="row2">
+                <div class="column2 left2" style="background-color:gold;">
+                    <h2>Viaje em segurança!</h2>
+                    <p>Proporcionamos o melhor sistema de segurança para que sua viajem saia conforme o planejado</p>
+                    <button class="btn-col2">Faça sua viagem</button>
+                </div>
+
+                <div class="column2 right2" style="background-color:#555; color:#f1f1f1">
+                    <h2>Destinos inesquecíveis</h2>
+                    <p>E com as melhores formas de pagamento</p>
+                    <button class="btn-col2">Faça sua viagem</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+<style>
+    .bg-home img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        z-index: -2;
+        position: absolute;
+    }
+
+    .bg-home::after {
+        display: block;
+        content: "";
+        width: 100%;
+        height: 450px;
+        background-color: #000;
+        z-index: -1;
+        position: absolute;
+        opacity: .3;
+    }
+
+    body {
+        background-color: #f1f1f1;
+    }
+
+    .column1 {
+        float: left;
+        width: 33%;
+        padding: 10px;
+        display: inline-block;
+    }
+
+    .row1 {
+        margin: 0 -5px;
+        max-width: 1100px;
+        width: 100%;
+    }
+
+        .row1:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+    .card1 {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 1px;
+        text-align: center;
+        background-color: #f1f1f1;
+    }
+
+        .card1 img {
+            width: 100%;
+        }
+
+        .card1 h3 {
+            font-size: 16px;
+            color: red;
+        }
+
+        .card1 p {
+            font-size: 14px;
+        }
+
+    .btn-card1 {
+        border: none;
+        color: white;
+        padding: 10px 24px;
+        font-size: 14px;
+        cursor: pointer;
+        background-color: #ff9800;
+        margin-bottom: 10px;
+        color: #111;
+        font-weight: 600;
+    }
+
+
+    .column2 {
+        float: left;
+        padding: 10px;
+        height: 250px;
+        text-align: center;
+    }
+
+    .left2 {
+        width: 60%;
+        padding: 50px 20px 20px 20px;
+        margin: 10px;
+    }
+
+    .right2 {
+        width: 30%;
+        padding: 50px 20px 20px 20px;
+        margin: 10px;
+    }
+
+    .row2:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .btn-col2 {
+        border: none;
+        color: white;
+        padding: 10px 24px;
+        font-size: 14px;
+        cursor: pointer;
+        background-color: #fff;
+        color: black;
+    }
+
+
+    @@media (max-width: 700px) {
+        .column1 {
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .left2 {
+            width: 95%;
+        }
+
+        .right2 {
+            width: 95%;
+        }
+    }
+</style>
+
